@@ -28,3 +28,4 @@ docs/images/implementation/timing-setup.png,Full setup timing view,Native Vivado
 docs/images/implementation/timing-hold.png,Hold timing view,Native Vivado capture,3_vivado_implementation/vivado_timing_hold_whs.png
 docs/images/implementation/timing-pulse-width.png,Pulse-width timing,Native Vivado capture,vivado_image/Capture - 2026-11-19 031845.png
 docs/images/implementation/batch-build-complete.png,Scripted OOC build completed,Native Vivado console,3_vivado_implementation/vivado_batch_build_done.png
+docs/images/implementation/power-summary.png,Power estimate from the GUI implementation run,Native Vivado capture,vivado_image/Capture d’écran 2026-11-19 031957.png

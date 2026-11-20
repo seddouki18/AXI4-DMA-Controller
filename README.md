@@ -78,6 +78,29 @@ For example, copying **16 bytes from `0x1000` to `0x8000`** needs four read beat
 
 *Native XSim capture: the read transaction finishes before the write transaction, and the write response follows the last data beat.*
 
+## Simulation waveforms
+
+### 16-byte copy, cycle by cycle
+
+![Cycle-by-cycle waveform of a four-word DMA copy](docs/images/waveforms/16-byte-copy.png)
+
+*Redrawn chronogram from the reference simulation. Four read beats fill the buffer, four write beats empty it, and the final B response completes the copy in 20 engine cycles. Each column represents 10 ns.*
+
+### Splitting at both 4 KiB boundaries
+
+![Native XSim waveform showing three bursts at source and destination page boundaries](docs/images/waveforms/xsim-4k-boundaries-clock.png)
+
+*Test 12 copies 128 bytes from `0x1FF0` to `0x8FF8` in segments of **2, 2, and 28 words**. The addresses advance without a read or write burst crossing a 4 KiB boundary.*
+
+### Backpressure on the final write beat
+
+![Native XSim waveform showing stable write data while WREADY pauses](docs/images/waveforms/xsim-last-beat-stall.png)
+
+*Test 80 pauses `WREADY` for five cycles on the last word. `WVALID`, `WDATA`, and `WLAST` stay stable until the beat is accepted; completion still waits for the write response.*
+
+[More waveform explanations, including read errors and FAULT](docs/WALKTHROUGH.md).
+
+
 ## Verification and measured results
 
 | Result | Reported value | Available evidence |
@@ -106,9 +129,40 @@ The timing result covers the **isolated block's internal register-to-register pa
 
 *The DMA design in Vivado's Device window, with the implemented design open and Implementation Complete visible. This shows the block in the FPGA fabric; it is not a board measurement.*
 
-![Vivado setup timing summary showing WNS +1.261 ns](docs/images/implementation/timing-summary.png)
+### FPGA resource use
 
-*Positive setup margin at the 100 MHz reference clock. See the [full timing report](reports/timing_summary.rpt) and [scope of the OOC constraints](constraints/BOUNDARY_ASSUMPTIONS.md).*
+![Vivado post-implementation resource summary](docs/images/implementation/resource-summary.png)
+
+*The reported implementation uses **604 LUTs, 378 flip-flops, and one RAMB18**. Vivado displays one RAMB18 as 0.50 block-RAM tiles. The [utilization report](reports/utilization.rpt) also records zero DSP blocks.*
+
+### Timing at 100 MHz
+
+| Check | Worst slack | Failing checks |
+|---|---:|---:|
+| Setup | **+1.261 ns** | 0 / 752 endpoints |
+| Hold | **+0.083 ns** | 0 / 752 endpoints |
+| Pulse width | **+4.500 ns** | 0 / 380 endpoints |
+
+![Vivado setup timing view with positive WNS at 100 MHz](docs/images/implementation/timing-setup.png)
+
+*Setup check: WNS is +1.261 ns and total negative slack is zero. The constrained internal paths meet the 10 ns clock period.*
+
+![Vivado hold timing view with positive WHS](docs/images/implementation/timing-hold.png)
+
+*Hold check: WHS is +0.083 ns, with no failing hold endpoints.*
+
+![Vivado pulse-width timing view](docs/images/implementation/timing-pulse-width.png)
+
+*Pulse-width check: the worst slack is +4.500 ns, with no failing checks. These timing results cover the isolated block's internal paths; AXI boundary paths still require system integration. See the [timing report](reports/timing_summary.rpt) and [OOC boundary assumptions](constraints/BOUNDARY_ASSUMPTIONS.md).*
+
+### Power estimate
+
+![Vivado GUI summary showing total on-chip power and confidence level](docs/images/implementation/power-summary.png)
+
+*The archived Vivado GUI implementation run estimates **0.109 W total on-chip power**: **0.006 W dynamic** and **0.103 W device static**. The displayed junction-temperature estimate is 26.3 °C.*
+
+The [original power report](reports/power_gui_reference.rpt) has **Medium confidence** and no simulation activity file. This is a tool estimate for the archived GUI run, not a measured board result or a new power result from the batch OOC build. [Power assumptions and report provenance](docs/RESULTS.md#power-estimation).
+
 
 ## Supported transfers and error behavior
 
@@ -125,7 +179,7 @@ V1 has one clock domain. Unaligned transfers, scatter-gather, circular operation
 
 ```text
 rtl/           Six synthesizable VHDL-2008 modules
-tb/           Top-level self-checking suite and standalone planner test
+tb/            Top-level self-checking suite and standalone planner test
 scripts/       XSim/GHDL simulation, regression, mutation, and Vivado builds
 constraints/   100 MHz clock constraint and OOC boundary assumptions
 reports/       Reference logs, per-test/campaign CSVs, and Vivado reports

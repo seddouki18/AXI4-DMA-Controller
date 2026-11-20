@@ -90,6 +90,16 @@ One RAMB18 is half of one 36 Kb block-RAM tile, which explains Vivado's **0.50 B
 
 **Native Vivado full view.** The design hierarchy includes `dma_top`, `dma_engine` and `dma_axi_lite_regs`. The visible DRC warning is **ZPS7-1: “Zynq requires PS7 block,”** also recorded in the [DRC report](../reports/drc.rpt). It reflects the absence of a processing-system block in this isolated Zynq design. The screenshots therefore do not establish a complete, DRC-clean Zynq system ready for board use. System integration remains a separate step.
 
+## Power estimation
+
+![Vivado project summary showing estimated on-chip power](images/implementation/power-summary.png)
+
+**Native Vivado GUI screenshot.** The estimated total on-chip power is **0.109 W**, comprising **0.006 W dynamic** and **0.103 W device static** power. The static component belongs to the device and should not be interpreted as DMA switching power. These are tool estimates, rather than measurements on a board.
+
+The [archived GUI-run power report](../reports/power_gui_reference.rpt) uses a 100 MHz clock and gives **Medium confidence**. No simulation activity file was supplied, and fewer than 25% of internal-node activities were user-specified, so the dynamic estimate depends on Vivado's activity assumptions.
+
+This power report is dated **November 18, 2026, at 23:27:15**, from the GUI implementation run. The canonical OOC timing report is dated **November 19, 2026, at 22:20:40**. The supplied [OOC build script](../scripts/build_ooc.tcl) does not call `report_power`; this power result is therefore a separate GUI-run reference.
+
 ## Timing at 100 MHz
 
 ![Vivado setup timing summary crop](images/implementation/timing-summary.png)

@@ -2,7 +2,7 @@
 
 [Project overview](../README.md) · [Architecture](ARCHITECTURE.md) · [Waveform walkthrough](WALKTHROUGH.md) · [Results](RESULTS.md)
 
-All 27 figures from the prepared image archive are retained here, together with the final implemented-device view and one useful additional pulse-width capture: **29 images in total**. The README highlights the key results; the detailed pages explain the remaining figures.
+All 27 figures from the prepared image archive are retained here, together with the final implemented-device view and additional pulse-width and power captures: **30 images in total**. The README highlights the key results; the detailed pages explain the remaining figures.
 
 Native tool screenshots record selected project runs. Explanatory diagrams and redrawn chronograms help interpret those runs and are labeled accordingly. Original French labels are preserved in some images; the captions below explain their meaning in English.
 
@@ -189,3 +189,9 @@ The timing and placement images characterize the isolated DMA block. They do not
 ![Scripted OOC build completed](images/implementation/batch-build-complete.png)
 
 **Native Vivado console.** The console records out-of-context synthesis, the 10 ns clock, a routed checkpoint, and BUILD DONE.
+
+### Power estimate from the GUI implementation run
+
+![Vivado GUI power summary](images/implementation/power-summary.png)
+
+**Native Vivado capture.** Total on-chip power is estimated at 0.109 W with Medium confidence. The archived GUI-run report separates 0.006 W dynamic power from 0.103 W device static power; no simulation activity file was supplied. This is a tool estimate, not a board measurement. See [the power report](../reports/power_gui_reference.rpt).
