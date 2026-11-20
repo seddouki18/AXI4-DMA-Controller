@@ -1,0 +1,88 @@
+test,name,seed,version,max_beats,bytes,cycles,bytes_per_cycle,end_time_ns,result
+1,reset and version,1,V1,256,,,,165,PASS
+2,"Lite skew, strobes, zero strobes, response backpressure",1,V1,256,,,,675,PASS
+3,invalid register and conflicting commands,1,V1,256,,,,1055,PASS
+4,idle soft reset,1,V1,256,,,,1175,PASS
+5,one word,1,V1,256,4,14,0.286,1885,PASS
+6,four words,1,V1,256,16,20,0.800,2645,PASS
+7,255 words,1,V1,256,1020,522,1.954,8405,PASS
+8,256 words,1,V1,256,1024,524,1.954,14215,PASS
+9,257 words,1,V1,256,1028,538,1.911,20125,PASS
+10,source boundary,1,V1,256,128,88,1.455,21535,PASS
+11,destination boundary,1,V1,256,64,56,1.143,22645,PASS
+12,different boundaries,1,V1,256,128,100,1.280,24205,PASS
+13,32 KiB block,1,V1,256,32768,16768,1.954,192415,PASS
+14,random independent stalls,1,V1,256,8192,5563,1.473,248575,PASS
+15,random command 1,1,V1,256,136,108,1.259,250185,PASS
+16,random command 2,1,V1,256,792,545,1.453,256195,PASS
+17,random command 3,1,V1,256,8008,5565,1.439,312405,PASS
+18,random command 4,1,V1,256,3180,2152,1.478,334465,PASS
+19,random command 5,1,V1,256,1176,839,1.402,343425,PASS
+20,random command 6,1,V1,256,2864,1948,1.470,363435,PASS
+21,random command 7,1,V1,256,3628,2517,1.441,389145,PASS
+22,random command 8,1,V1,256,8152,5580,1.461,445505,PASS
+23,random command 9,1,V1,256,1060,735,1.442,453415,PASS
+24,random command 10,1,V1,256,3656,2511,1.456,479075,PASS
+25,random command 11,1,V1,256,2256,1534,1.471,494985,PASS
+26,random command 12,1,V1,256,4016,2740,1.466,522945,PASS
+27,random command 13,1,V1,256,3020,2036,1.483,543855,PASS
+28,random command 14,1,V1,256,7832,5450,1.437,598915,PASS
+29,random command 15,1,V1,256,880,618,1.424,605625,PASS
+30,random command 16,1,V1,256,7520,5090,1.477,657085,PASS
+31,random command 17,1,V1,256,3080,2122,1.451,678845,PASS
+32,random command 18,1,V1,256,4996,3410,1.465,713505,PASS
+33,random command 19,1,V1,256,5100,3461,1.474,748665,PASS
+34,random command 20,1,V1,256,5628,3842,1.465,787625,PASS
+35,random command 21,1,V1,256,3016,2058,1.466,808735,PASS
+36,random command 22,1,V1,256,1296,915,1.416,818445,PASS
+37,random command 23,1,V1,256,736,466,1.579,823655,PASS
+38,random command 24,1,V1,256,1304,924,1.411,833465,PASS
+39,random command 25,1,V1,256,6840,4622,1.480,880225,PASS
+40,random command 26,1,V1,256,6384,4378,1.458,924535,PASS
+41,random command 27,1,V1,256,3892,2700,1.441,952095,PASS
+42,random command 28,1,V1,256,3796,2581,1.471,978455,PASS
+43,random command 29,1,V1,256,852,563,1.513,984615,PASS
+44,random command 30,1,V1,256,8016,5447,1.472,1039625,PASS
+45,random command 31,1,V1,256,4536,3157,1.437,1071735,PASS
+46,random command 32,1,V1,256,5124,3504,1.462,1107345,PASS
+47,random command 33,1,V1,256,1412,973,1.451,1117605,PASS
+48,random command 34,1,V1,256,3924,2713,1.446,1145265,PASS
+49,random command 35,1,V1,256,6072,4152,1.462,1187325,PASS
+50,random command 36,1,V1,256,6716,4564,1.472,1233535,PASS
+51,random command 37,1,V1,256,5188,3597,1.442,1270045,PASS
+52,random command 38,1,V1,256,4980,3377,1.475,1304355,PASS
+53,random command 39,1,V1,256,4316,2932,1.472,1334215,PASS
+54,random command 40,1,V1,256,2688,1833,1.466,1353075,PASS
+55,zero length,1,V1,256,,,,1353525,PASS
+56,non-word length,1,V1,256,,,,1353975,PASS
+57,unaligned source,1,V1,256,,,,1354425,PASS
+58,unaligned destination,1,V1,256,,,,1354875,PASS
+59,source overflow,1,V1,256,,,,1355325,PASS
+60,destination overflow,1,V1,256,,,,1355775,PASS
+61,overlap,1,V1,256,,,,1356225,PASS
+62,"busy protection, delayed B, IRQ, W1C",1,V1,256,,,,1364225,PASS
+63,R error draining 2,1,V1,256,,,,1368085,PASS
+64,R error draining 2,1,V1,256,,,,1372145,PASS
+65,R error draining 2,1,V1,256,,,,1376055,PASS
+66,R error draining 3,1,V1,256,,,,1380065,PASS
+67,R error draining 3,1,V1,256,,,,1384125,PASS
+68,R error draining 3,1,V1,256,,,,1388235,PASS
+69,B error stops next burst 4,1,V1,256,,,,1395615,PASS
+70,B error stops next burst 5,1,V1,256,,,,1402945,PASS
+71,unexpected EXOKAY,1,V1,256,,,,1403475,PASS
+72,malformed RLAST fault,1,V1,256,,,,1404005,PASS
+73,coordinated external reset with active AR offer,1,V1,256,,,,1404695,PASS
+74,restart after reset,1,V1,256,64,60,1.067,1405855,PASS
+75,register map after reset,1,V1,256,,,,1406375,PASS
+76,2048 bytes,1,V1,256,2048,1375,1.489,1420685,PASS
+77,"4096 bytes, full 4 KiB page",1,V1,256,4096,2772,1.478,1448945,PASS
+78,WREADY pause on first beat,1,V1,256,1024,528,1.939,1454755,PASS
+79,WREADY pause on middle beat,1,V1,256,1024,529,1.936,1460615,PASS
+80,WREADY pause on last beat,1,V1,256,1024,529,1.936,1466475,PASS
+81,missing RLAST fault,1,V1,256,,,,1467075,PASS
+82,unexpected RID fault,1,V1,256,,,,1467625,PASS
+83,unexpected BID fault,1,V1,256,,,,1473425,PASS
+84,restart after protocol faults,1,V1,256,64,44,1.455,1474505,PASS
+85,"slave hang on AR detected, no false cancel, resumed",1,V1,256,,,,1490315,PASS
+86,"slave hang on W mid-burst detected, no false cancel, resumed",1,V1,256,,,,1506165,PASS
+87,"slave hang on B detected, no false cancel, resumed",1,V1,256,,,,1521975,PASS

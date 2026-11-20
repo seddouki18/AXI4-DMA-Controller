@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" width="980" height="470" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
+    </marker>
+    <marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="470" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="490" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1b1b1b">AXI4 DMA controller, V1 (store-and-forward)</text>
+
+  <!-- dma_top boundary -->
+  <rect x="200" y="50" width="560" height="400" rx="10" fill="#f6f8fb" stroke="#7a8794" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="215" y="72" font-size="13" font-weight="bold" fill="#4a5560">dma_top</text>
+  <text x="745" y="72" text-anchor="end" font-size="12" fill="#4a5560">one clock aclk, reset aresetn (active low)</text>
+
+  <!-- host -->
+  <rect x="20" y="150" width="150" height="110" rx="8" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="95" y="182" text-anchor="middle" font-size="13" font-weight="bold">Host</text>
+  <text x="95" y="202" text-anchor="middle" font-size="12">CPU or testbench</text>
+  <text x="95" y="222" text-anchor="middle" font-size="12">AXI4-Lite master</text>
+  <text x="95" y="242" text-anchor="middle" font-size="11" fill="#555">interrupt input</text>
+
+  <!-- memory -->
+  <rect x="810" y="150" width="150" height="190" rx="8" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="885" y="182" text-anchor="middle" font-size="13" font-weight="bold">Memory</text>
+  <text x="885" y="202" text-anchor="middle" font-size="12">AXI4 slave</text>
+  <text x="885" y="222" text-anchor="middle" font-size="11" fill="#555">BRAM ctrl, DDR,</text>
+  <text x="885" y="238" text-anchor="middle" font-size="11" fill="#555">or the testbench</text>
+  <text x="885" y="254" text-anchor="middle" font-size="11" fill="#555">memory model</text>
+
+  <!-- regs -->
+  <rect x="212" y="95" width="230" height="200" rx="8" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="327" y="120" text-anchor="middle" font-size="13" font-weight="bold">dma_axi_lite_regs</text>
+  <text x="327" y="138" text-anchor="middle" font-size="11" fill="#555">AXI4-Lite slave, 9 registers</text>
+  <g font-size="10.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#1b1b1b">
+    <text x="224" y="162">00 CTRL</text><text x="316" y="162">10 LEN</text>
+    <text x="224" y="178">04 STATUS</text><text x="316" y="178">14 LAST_ERROR</text>
+    <text x="224" y="194">08 SRC</text><text x="316" y="194">18 BYTES_COMMITTED</text>
+    <text x="224" y="210">0C DST</text><text x="316" y="210">1C CYCLE_COUNT</text>
+    <text x="224" y="226">20 VERSION = 0x00010000</text>
+  </g>
+  <text x="327" y="252" text-anchor="middle" font-size="11" fill="#555">command check, SLVERR / DECERR</text>
+  <text x="327" y="268" text-anchor="middle" font-size="11" fill="#555">sticky DONE / ERROR, W1C</text>
+  <text x="327" y="284" text-anchor="middle" font-size="11" fill="#555">irq = IRQ_EN and (DONE or ERROR)</text>
+
+  <!-- engine -->
+  <rect x="490" y="95" width="250" height="200" rx="8" fill="#ffffff" stroke="#1f5fa8" stroke-width="2"/>
+  <text x="615" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f5fa8">dma_engine</text>
+  <text x="615" y="138" text-anchor="middle" font-size="11" fill="#555">FSM, one burst in flight at a time</text>
+  <text x="615" y="160" text-anchor="middle" font-size="11" font-family="DejaVu Sans Mono, Consolas, monospace">IDLE - PLAN - AR_REQ - R_DATA</text>
+  <text x="615" y="176" text-anchor="middle" font-size="11" font-family="DejaVu Sans Mono, Consolas, monospace">AW_REQ - PREFETCH - W_DATA</text>
+  <text x="615" y="192" text-anchor="middle" font-size="11" font-family="DejaVu Sans Mono, Consolas, monospace">B_RESP - PLAN or IDLE ; FAULT</text>
+  <text x="615" y="216" text-anchor="middle" font-size="11" fill="#555">src_cur, dst_cur, remaining</text>
+  <text x="615" y="232" text-anchor="middle" font-size="11" fill="#555">error code, bytes committed,</text>
+  <text x="615" y="248" text-anchor="middle" font-size="11" fill="#555">cycle counter</text>
+  <text x="615" y="272" text-anchor="middle" font-size="11" fill="#555">AxSIZE=2, INCR, WSTRB=1111, ID=0</text>
+
+  <!-- planner -->
+  <rect x="490" y="330" width="118" height="95" rx="8" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="549" y="352" text-anchor="middle" font-size="12" font-weight="bold">dma_burst</text>
+  <text x="549" y="367" text-anchor="middle" font-size="12" font-weight="bold">_planner</text>
+  <text x="549" y="386" text-anchor="middle" font-size="10.5" fill="#555">min(remaining,</text>
+  <text x="549" y="400" text-anchor="middle" font-size="10.5" fill="#555">MAX_BEATS, src 4K,</text>
+  <text x="549" y="414" text-anchor="middle" font-size="10.5" fill="#555">dst 4K)</text>
+
+  <!-- buffer -->
+  <rect x="622" y="330" width="118" height="95" rx="8" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="681" y="352" text-anchor="middle" font-size="12" font-weight="bold">dma_burst</text>
+  <text x="681" y="367" text-anchor="middle" font-size="12" font-weight="bold">_buffer</text>
+  <text x="681" y="386" text-anchor="middle" font-size="10.5" fill="#555">256 x 32 bit</text>
+  <text x="681" y="400" text-anchor="middle" font-size="10.5" fill="#555">1 RAMB18,</text>
+  <text x="681" y="414" text-anchor="middle" font-size="10.5" fill="#555">sync read</text>
+
+  <!-- host <-> regs -->
+  <line x1="170" y1="185" x2="210" y2="185" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)" marker-start="url(#ah)"/>
+  <text x="190" y="176" text-anchor="middle" font-size="9.5" fill="#333">Lite</text>
+  <line x1="210" y1="240" x2="172" y2="240" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="190" y="232" text-anchor="middle" font-size="9.5" fill="#333">irq</text>
+
+  <!-- regs <-> engine -->
+  <line x1="442" y1="165" x2="488" y2="165" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="465" y="146" text-anchor="middle" font-size="9.5" fill="#333">start,</text>
+  <text x="465" y="157" text-anchor="middle" font-size="9.5" fill="#333">cmd</text>
+  <line x1="488" y1="230" x2="444" y2="230" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="465" y="246" text-anchor="middle" font-size="9.5" fill="#333">status,</text>
+  <text x="465" y="257" text-anchor="middle" font-size="9.5" fill="#333">counts</text>
+
+  <!-- engine <-> planner / buffer -->
+  <line x1="549" y1="297" x2="549" y2="328" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)" marker-start="url(#ah)"/>
+  <line x1="681" y1="297" x2="681" y2="328" stroke="#2b2b2b" stroke-width="1.6" marker-end="url(#ah)" marker-start="url(#ah)"/>
+  <text x="690" y="316" font-size="9.5" fill="#333">R write / W read</text>
+
+  <!-- engine <-> memory -->
+  <line x1="742" y1="175" x2="808" y2="175" stroke="#1f5fa8" stroke-width="2" marker-end="url(#ahb)"/>
+  <text x="775" y="168" text-anchor="middle" font-size="10" fill="#1f5fa8">AR</text>
+  <line x1="808" y1="205" x2="744" y2="205" stroke="#1f5fa8" stroke-width="2" marker-end="url(#ahb)"/>
+  <text x="775" y="198" text-anchor="middle" font-size="10" fill="#1f5fa8">R</text>
+  <line x1="742" y1="240" x2="808" y2="240" stroke="#1f5fa8" stroke-width="2" marker-end="url(#ahb)"/>
+  <text x="775" y="233" text-anchor="middle" font-size="10" fill="#1f5fa8">AW, W</text>
+  <line x1="808" y1="275" x2="744" y2="275" stroke="#1f5fa8" stroke-width="2" marker-end="url(#ahb)"/>
+  <text x="775" y="268" text-anchor="middle" font-size="10" fill="#1f5fa8">B</text>
+  <text x="885" y="300" text-anchor="middle" font-size="11" fill="#1f5fa8">AXI4 master, 32 bit</text>
+  <text x="885" y="316" text-anchor="middle" font-size="11" fill="#1f5fa8">bursts up to 256 beats</text>
+
+  <!-- data path note -->
+  <text x="20" y="330" font-size="11.5" font-weight="bold" fill="#1b1b1b">Per segment:</text>
+  <text x="20" y="348" font-size="11" fill="#333">1. plan N beats</text>
+  <text x="20" y="364" font-size="11" fill="#333">2. read N words into</text>
+  <text x="34" y="378" font-size="11" fill="#333">the buffer (AR, R)</text>
+  <text x="20" y="394" font-size="11" fill="#333">3. write them out</text>
+  <text x="34" y="408" font-size="11" fill="#333">(AW, W with WLAST)</text>
+  <text x="20" y="424" font-size="11" fill="#333">4. wait for B, then</text>
+  <text x="34" y="438" font-size="11" fill="#333">next segment or DONE</text>
+</svg>

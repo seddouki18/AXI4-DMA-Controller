@@ -1,0 +1,316 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 19 21:35:15 2026
+# Process ID: 2804
+# Current directory: C:/Users/Lenovo/Desktop/AXI_DMA/sim_cmd
+# Command line: xsim.exe -log sim.log -mode tcl -source {xsim.dir/tbsim/xsim_script.tcl}
+# Log file: C:/Users/Lenovo/Desktop/AXI_DMA/sim_cmd/sim.log
+# Journal file: C:/Users/Lenovo/Desktop/AXI_DMA/sim_cmd\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tbsim/xsim_script.tcl
+# xsim {tbsim} -autoloadwcfg -runall
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run -all
+Note: PASS 1 reset and version
+Time: 165 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 2 Lite skew, strobes, zero strobes, response backpressure
+Time: 675 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 3 invalid register and conflicting commands
+Time: 1055 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 4 idle soft reset
+Time: 1175 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4 cycles=14
+Time: 1885 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 5 one word
+Time: 1885 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=16 cycles=20
+Time: 2645 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 6 four words
+Time: 2645 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1020 cycles=522
+Time: 8405 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 7 255 words
+Time: 8405 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1024 cycles=524
+Time: 14215 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 8 256 words
+Time: 14215 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1028 cycles=538
+Time: 20125 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 9 257 words
+Time: 20125 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=128 cycles=88
+Time: 21535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 10 source boundary
+Time: 21535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=64 cycles=56
+Time: 22645 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 11 destination boundary
+Time: 22645 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=128 cycles=100
+Time: 24205 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 12 different boundaries
+Time: 24205 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=32768 cycles=16768
+Time: 192415 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 13 32 KiB block
+Time: 192415 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=8192 cycles=5563
+Time: 248575 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 14 random independent stalls
+Time: 248575 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=136 cycles=108
+Time: 250185 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 15 random command 1
+Time: 250185 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=792 cycles=545
+Time: 256195 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 16 random command 2
+Time: 256195 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=8008 cycles=5565
+Time: 312405 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 17 random command 3
+Time: 312405 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3180 cycles=2152
+Time: 334465 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 18 random command 4
+Time: 334465 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1176 cycles=839
+Time: 343425 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 19 random command 5
+Time: 343425 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=2864 cycles=1948
+Time: 363435 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 20 random command 6
+Time: 363435 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3628 cycles=2517
+Time: 389145 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 21 random command 7
+Time: 389145 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=8152 cycles=5580
+Time: 445505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 22 random command 8
+Time: 445505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1060 cycles=735
+Time: 453415 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 23 random command 9
+Time: 453415 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3656 cycles=2511
+Time: 479075 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 24 random command 10
+Time: 479075 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=2256 cycles=1534
+Time: 494985 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 25 random command 11
+Time: 494985 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4016 cycles=2740
+Time: 522945 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 26 random command 12
+Time: 522945 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3020 cycles=2036
+Time: 543855 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 27 random command 13
+Time: 543855 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=7832 cycles=5450
+Time: 598915 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 28 random command 14
+Time: 598915 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=880 cycles=618
+Time: 605625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 29 random command 15
+Time: 605625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=7520 cycles=5090
+Time: 657085 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 30 random command 16
+Time: 657085 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3080 cycles=2122
+Time: 678845 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 31 random command 17
+Time: 678845 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4996 cycles=3410
+Time: 713505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 32 random command 18
+Time: 713505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=5100 cycles=3461
+Time: 748665 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 33 random command 19
+Time: 748665 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=5628 cycles=3842
+Time: 787625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 34 random command 20
+Time: 787625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3016 cycles=2058
+Time: 808735 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 35 random command 21
+Time: 808735 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1296 cycles=915
+Time: 818445 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 36 random command 22
+Time: 818445 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=736 cycles=466
+Time: 823655 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 37 random command 23
+Time: 823655 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1304 cycles=924
+Time: 833465 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 38 random command 24
+Time: 833465 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=6840 cycles=4622
+Time: 880225 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 39 random command 25
+Time: 880225 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=6384 cycles=4378
+Time: 924535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 40 random command 26
+Time: 924535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3892 cycles=2700
+Time: 952095 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 41 random command 27
+Time: 952095 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3796 cycles=2581
+Time: 978455 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 42 random command 28
+Time: 978455 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=852 cycles=563
+Time: 984615 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 43 random command 29
+Time: 984615 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=8016 cycles=5447
+Time: 1039625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 44 random command 30
+Time: 1039625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4536 cycles=3157
+Time: 1071735 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 45 random command 31
+Time: 1071735 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=5124 cycles=3504
+Time: 1107345 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 46 random command 32
+Time: 1107345 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1412 cycles=973
+Time: 1117605 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 47 random command 33
+Time: 1117605 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=3924 cycles=2713
+Time: 1145265 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 48 random command 34
+Time: 1145265 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=6072 cycles=4152
+Time: 1187325 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 49 random command 35
+Time: 1187325 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=6716 cycles=4564
+Time: 1233535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 50 random command 36
+Time: 1233535 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=5188 cycles=3597
+Time: 1270045 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 51 random command 37
+Time: 1270045 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4980 cycles=3377
+Time: 1304355 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 52 random command 38
+Time: 1304355 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4316 cycles=2932
+Time: 1334215 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 53 random command 39
+Time: 1334215 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=2688 cycles=1833
+Time: 1353075 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 54 random command 40
+Time: 1353075 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 55 zero length
+Time: 1353525 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 56 non-word length
+Time: 1353975 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 57 unaligned source
+Time: 1354425 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 58 unaligned destination
+Time: 1354875 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 59 source overflow
+Time: 1355325 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 60 destination overflow
+Time: 1355775 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 61 overlap
+Time: 1356225 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 62 busy protection, delayed B, IRQ, W1C
+Time: 1364225 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 63 R error draining 2
+Time: 1368085 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 64 R error draining 2
+Time: 1372145 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 65 R error draining 2
+Time: 1376055 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 66 R error draining 3
+Time: 1380065 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 67 R error draining 3
+Time: 1384125 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 68 R error draining 3
+Time: 1388235 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 69 B error stops next burst 4
+Time: 1395615 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 70 B error stops next burst 5
+Time: 1402945 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 71 unexpected EXOKAY
+Time: 1403475 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 72 malformed RLAST fault
+Time: 1404005 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 73 coordinated external reset with active AR offer
+Time: 1404695 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=64 cycles=60
+Time: 1405855 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 74 restart after reset
+Time: 1405855 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 75 register map after reset
+Time: 1406375 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=2048 cycles=1375
+Time: 1420685 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 76 2048 bytes
+Time: 1420685 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=4096 cycles=2772
+Time: 1448945 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 77 4096 bytes, full 4 KiB page
+Time: 1448945 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1024 cycles=528
+Time: 1454755 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 78 WREADY pause on first beat
+Time: 1454755 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1024 cycles=529
+Time: 1460615 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 79 WREADY pause on middle beat
+Time: 1460615 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=1024 cycles=529
+Time: 1466475 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 80 WREADY pause on last beat
+Time: 1466475 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 81 missing RLAST fault
+Time: 1467075 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 82 unexpected RID fault
+Time: 1467625 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 83 unexpected BID fault
+Time: 1473425 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: METRIC bytes=64 cycles=44
+Time: 1474505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 84 restart after protocol faults
+Time: 1474505 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: E07 watchdog (expected): no AXI handshake for 1000 cycles; ARVALID=1 AWVALID=0 WVALID=0 RREADY=0 BREADY=0 R/W/B beats=0/0/0
+Time: 1484925 ns  Iteration: 0  Process: /tb_dma_top/progress_watchdog  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 85 slave hang on AR detected, no false cancel, resumed
+Time: 1490315 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: E07 watchdog (expected): no AXI handshake for 1000 cycles; ARVALID=0 AWVALID=0 WVALID=1 RREADY=0 BREADY=0 R/W/B beats=256/130/0
+Time: 1504625 ns  Iteration: 0  Process: /tb_dma_top/progress_watchdog  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 86 slave hang on W mid-burst detected, no false cancel, resumed
+Time: 1506165 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: E07 watchdog (expected): no AXI handshake for 1000 cycles; ARVALID=0 AWVALID=0 WVALID=0 RREADY=0 BREADY=1 R/W/B beats=256/256/0
+Time: 1521735 ns  Iteration: 0  Process: /tb_dma_top/progress_watchdog  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: PASS 87 slave hang on B detected, no false cancel, resumed
+Time: 1521975 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+Note: ALL TESTS PASSED count=87 max_beats=256 seed=1
+Time: 1521975 ns  Iteration: 0  Process: /tb_dma_top/stimulus  File: C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd
+$finish called at time : 1521975 ns : File "C:/Users/Lenovo/Desktop/AXI_DMA/tb/tb_dma_top.vhd" Line 554
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:01 . Memory (MB): peak = 212.133 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Nov 19 21:36:34 2026...

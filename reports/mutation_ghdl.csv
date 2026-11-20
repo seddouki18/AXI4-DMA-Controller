@@ -1,0 +1,13 @@
+mutant,file,result,first_failure
+Ignore unexpected RID,dma_engine.vhd,DETECTED,test 82: Expected ERROR only
+Ignore unexpected BID,dma_engine.vhd,DETECTED,test 83: Expected ERROR only
+Accept a missing RLAST,dma_engine.vhd,DETECTED,test 81: Expected ERROR only
+Bursts half the planned size,dma_engine.vhd,DETECTED,test 6: Unexpected number of bursts
+RAM prefetch ignores WREADY (WDATA changes in a stall),dma_engine.vhd,DETECTED,test 14: W changed while stalled
+DONE without waiting for BVALID,dma_engine.vhd,DETECTED,test 5: Terminal before AXI completion
+No 4 KiB split on the source side,dma_burst_planner.vhd,DETECTED,test 10: AR alignment / 4 KB boundary
+SLVERR reported as DECERR on R,dma_engine.vhd,DETECTED,test 63: Bad error code
+Segment written after an R error,dma_engine.vhd,DETECTED,test 63: Expected ERROR only
+ARVALID withdrawn after a long wait,dma_engine.vhd,DETECTED,test 9: E07 watchdog: no AXI handshake for 1000 cycles; ARVALID=0 AWVALID=0 WVALID=0 RREADY=1 BREADY=0 R/W/B beats=256/256/1
+START accepted while BUSY,dma_axi_lite_regs.vhd,DETECTED,"test 62: Wrong AXI-Lite BRESP, offset 0"
+Overlapping source and destination accepted,dma_pkg.vhd,DETECTED,"test 61: Wrong AXI-Lite BRESP, offset 0"

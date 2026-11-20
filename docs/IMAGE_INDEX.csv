@@ -1,0 +1,30 @@
+repository_path,title,type,source_archive_path
+docs/images/architecture/architecture.png,System architecture,Explanatory diagram,4_schemas/architecture_EN.png
+docs/images/architecture/cpu-vs-dma.png,CPU copy versus DMA copy,Explanatory diagram,4_schemas/cpu_vs_dma.png
+docs/images/architecture/axi4-channels.png,The five AXI4 channels,Explanatory diagram,4_schemas/canaux_axi4.png
+docs/images/architecture/valid-ready-handshake.png,VALID and READY,Explanatory diagram,4_schemas/handshake_valid_ready.png
+docs/images/architecture/engine-fsm.png,Transfer-engine state machine,Explanatory diagram,4_schemas/fsm_engine_EN.png
+docs/images/architecture/datapath.png,Data path through the buffer,Explanatory diagram,4_schemas/chemin_des_donnees.png
+docs/images/architecture/store-and-forward.png,V1 scheduling and planned V2 overlap,Explanatory diagram,4_schemas/store_and_forward.png
+docs/images/architecture/4k-splitting.png,Source and destination page boundaries,Explanatory diagram,4_schemas/decoupage_4k.png
+docs/images/architecture/control-status-registers.png,Control and status bits,Explanatory diagram,4_schemas/registres_ctrl_status.png
+docs/images/architecture/testbench.png,Self-checking testbench,Explanatory diagram,4_schemas/banc_de_test.png
+docs/images/waveforms/axi-lite-programming.png,Programming a copy,Redrawn simulation chronogram,5_chronogrammes_simulation_propres/programmation_axi4_lite.png
+docs/images/waveforms/16-byte-copy.png,"A 16-byte copy, cycle by cycle",Redrawn simulation chronogram,5_chronogrammes_simulation_propres/copie_16_octets_cycle_par_cycle.png
+docs/images/waveforms/xsim-nominal-copy.png,Nominal copy in XSim,Native XSim capture,1_xsim_chronogrammes/xsim_test6_copie_nominale.png
+docs/images/waveforms/4k-three-bursts.png,Three bursts at offset page boundaries,Redrawn simulation chronogram,5_chronogrammes_simulation_propres/decoupage_4k_trois_rafales.png
+docs/images/waveforms/xsim-4k-boundaries.png,4 KiB splitting in XSim,Native XSim capture,1_xsim_chronogrammes/xsim_test12_frontieres_4k.png
+docs/images/waveforms/xsim-4k-boundaries-clock.png,Boundary split with clock and counters,Native XSim capture,1_xsim_chronogrammes/xsim_test12_frontieres_4k_avec_aclk.png
+docs/images/waveforms/last-beat-stall.png,Backpressure on the final word,Redrawn simulation chronogram,5_chronogrammes_simulation_propres/pause_wready_dernier_mot.png
+docs/images/waveforms/xsim-last-beat-stall.png,Last-beat backpressure in XSim,Native XSim capture,1_xsim_chronogrammes/xsim_test80_pause_wready_dernier_mot.png
+docs/images/waveforms/read-error-drain.png,Draining a read after an error,Redrawn simulation chronogram,5_chronogrammes_simulation_propres/erreur_lecture_vidange.png
+docs/images/waveforms/protocol-fault.png,Malformed read response and FAULT,Redrawn simulation chronogram,5_chronogrammes_simulation_propres/violation_protocole_fault.png
+docs/images/simulation/xsim-87-tests-passed.png,87 reference tests passed,Native XSim console,2_resultats_simulation/xsim_87_tests_passed.png
+docs/images/implementation/dma-device-view.png,Implemented DMA in the device,Native Vivado capture,vivado_image/fulll.png
+docs/images/implementation/resource-summary.png,Resource summary,Native Vivado crop,3_vivado_implementation/zoom_utilisation_604lut_378ff.png
+docs/images/implementation/resource-full-view.png,Utilization in its tool context,Native Vivado capture,3_vivado_implementation/vivado_utilisation.png
+docs/images/implementation/timing-summary.png,Setup slack summary,Native Vivado crop,3_vivado_implementation/zoom_timing_wns_1.261ns.png
+docs/images/implementation/timing-setup.png,Full setup timing view,Native Vivado capture,3_vivado_implementation/vivado_timing_setup_wns.png
+docs/images/implementation/timing-hold.png,Hold timing view,Native Vivado capture,3_vivado_implementation/vivado_timing_hold_whs.png
+docs/images/implementation/timing-pulse-width.png,Pulse-width timing,Native Vivado capture,vivado_image/Capture - 2026-11-19 031845.png
+docs/images/implementation/batch-build-complete.png,Scripted OOC build completed,Native Vivado console,3_vivado_implementation/vivado_batch_build_done.png
